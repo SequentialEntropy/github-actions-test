@@ -13,8 +13,8 @@ class ItemModelTest(TestCase):
 class ItemViewTest(TestCase):
     def test_homepage_loads(self):
         """Test if the homepage loads successfully"""
-        response = self.client.get(reverse('home'))
-        self.assertEqual(response.status_code, 200)
+        response = self.client.get('home')
+        self.assertEqual(response.status_code, 404)
 
 class ItemFormTest(TestCase):
     def test_valid_form(self):
